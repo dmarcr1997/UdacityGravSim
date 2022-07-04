@@ -3,12 +3,12 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class GravSimTarget : TargetRules
+public class GalaxySimTarget : TargetRules
 {
-	public GravSimTarget( TargetInfo Target) : base(Target)
+	public GalaxySimTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.AddRange( new string[] { "GravSim" } );
+		ExtraModuleNames.AddRange( new string[] { "GalaxySim" } );
 	}
 }

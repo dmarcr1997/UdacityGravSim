@@ -3,33 +3,37 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "GameFramework/Actor.h"
 #include "NiagaraFunctionLibrary.h"
 #include "Niagaracomponent.h"
-#include "GalaxyClass.generated.h"
-
+#include "ObjectSpawner.generated.h"
 
 UCLASS()
-class GRAVSIM_API AGalaxyClass : public APawn
+class GALAXYSIM_API AObjectSpawner : public AActor
 {
 	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
 	UPROPERTY(EditAnywhere)
 	class UNiagaraSystem* NiagaraTemplate;
 
+	UPROPERTY(EditAnywhere)
+	float startTime = 20;
+	UPROPERTY()
+	USceneComponent* Root;
 
-public:
-	// Sets default values for this pawn's properties
-	AGalaxyClass();
-
+	UPROPERTY(EditAnywhere)
+	UStaticMeshComponent* Mesh;
+	AObjectSpawner();
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
+	void EndPlay(const EEndPlayReason::Type EndPlayReason);
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	UNiagaraComponent* GalaxySpawn;
 
 };

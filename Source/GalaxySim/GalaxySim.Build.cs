@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class GravSim : ModuleRules
+public class GalaxySim : ModuleRules
 {
-	public GravSim(ReadOnlyTargetRules Target) : base(Target)
+	public GalaxySim(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	

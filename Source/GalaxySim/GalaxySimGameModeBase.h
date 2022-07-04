@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "GravSimGameModeBase.generated.h"
+#include "GalaxySimGameModeBase.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GRAVSIM_API AGravSimGameModeBase : public AGameModeBase
+class GALAXYSIM_API AGalaxySimGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
